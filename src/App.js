@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 
 import './App.css';
+import SearchGiphy from './components/searchGiphy';
 
 
-const giphyApiKey = 'bS07LFfS4YxZqE5wTrcPGMTJfPTO2LxP';
 
 function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
+      <SearchGiphy></SearchGiphy>
     </div>
   );
 }
