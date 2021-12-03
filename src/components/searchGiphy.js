@@ -11,12 +11,11 @@ function SearchGiphy() {
     const requestToGiphy = () => {
         if(!input) return;
 
-        axios.get(`https://api.giphy.com/v1/gifs/search?&q=${input}&api_key=${giphyApiKey}&limit=10&rating=g`).then((giphyResults) => {
-            return giphyResults.data.data
+        axios.get(`/search?input=${input}`).then((res) => {
+            return res.data
         }).catch((err) => {
-            console.log(err)
-            // giphyResults.status(500)
-        })    
+            console.log(err);
+        })
     }
     // we will probably want to save the users giff they selected
 
